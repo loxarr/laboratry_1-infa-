@@ -3,10 +3,18 @@
 Я попробовал написание `touch script.bash` и `gedit script.bash`, где Touch — команда Unix, которая используется для создания пустых файлов и gedit - запуск текстого редактора в файле script.bash.
 В файле я написал #!/bin/bash( для указание, где хранится bash) и echo "Welcome to ITMO University". Echo — это встроенная команда в Linux, которая выводит строку текста в терминал.
 Первый вариант решения задачи у меня выглядел так:
-<img width="193" alt="Снимок экрана 2024-09-18 в 00 32 07" src="https://github.com/user-attachments/assets/ef03f0e8-872b-41ab-b834-f7615591a0b1">
+```
+#!/bin/bash
+read name
+echo "Welcome, $name"
+```
 В ней я использовал функцию read для прочтения строки. 
 Конечный вариант выглядит так: 
-<img width="133" alt="Снимок экрана 2024-09-18 в 00 32 27" src="https://github.com/user-attachments/assets/e8590203-5d25-40c1-98ec-8e1895b03bfe">
+```
+#!/bin/bash
+
+echo "Welcome, $* "
+```
  Данная программа реализована через позиционный параметр "$*", который принимает значение в виде одной строки 
 
 <img width="643" alt="Снимок экрана 2024-09-18 в 01 05 00" src="https://github.com/user-attachments/assets/c255fcfc-9d13-4e01-b220-e47ee788d8c1">
